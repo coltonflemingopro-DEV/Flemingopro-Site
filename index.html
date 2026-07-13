@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flemingo Productions — Cinematography, Editing & Creative Direction</title>
+<meta name="description" content="Flemingo Productions — cinematography, editing, and creative direction for brands, weddings, and stories worth telling. Trusted by ICAST, Insta360, Viltrox, and more." />
+<meta property="og:title" content="Flemingo Productions" />
+<meta property="og:description" content="Cinematography, editing & creative direction for brands, weddings, and stories worth telling." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0e0e11; --bg-soft:#15151a; --panel:#1b1b21;
+    --cream:#f6f3ee; --card:#ffffff;
+    --ink:#17171b; --muted-d:#9a9aa6; --muted-l:#6c6c78;
+    --accent:#ff5b6e; --accent-soft:#ffb3a7; --line:#26262e;
+    --maxw:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.1;font-weight:700;letter-spacing:-0.02em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .accent{color:var(--accent)}
+  section{padding:96px 0}
+  .eyebrow{font-family:'Sora',sans-serif;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
+  .sec-head{max-width:660px;margin-bottom:46px}
+  .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.9rem)}
+  .sec-head p{margin-top:16px;font-size:1.05rem}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(14,14,17,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .logo{font-family:'Sora',sans-serif;font-weight:800;font-size:1.28rem;letter-spacing:-0.03em}
+  .logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-size:.95rem;color:#d7d7de;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--accent)}
+  .btn{display:inline-block;font-family:'Sora',sans-serif;font-weight:600;font-size:.92rem;padding:12px 22px;border-radius:999px;transition:transform .15s ease,background .2s,box-shadow .2s;cursor:pointer;border:none}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 22px rgba(255,91,110,.32)}
+  .btn-primary:hover{transform:translateY(-2px)}
+  .btn-ghost{background:transparent;border:1px solid #3a3a45;color:var(--cream)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-dark{background:#141418;color:#fff;border:1px solid #141418}
+  .btn-dark:hover{background:#000;transform:translateY(-2px)}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+  .hamburger span{width:24px;height:2px;background:var(--cream);transition:.3s}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;padding:110px 0 120px;background:
+     radial-gradient(1100px 500px at 78% -8%, rgba(255,91,110,.20), transparent 60%),
+     radial-gradient(760px 420px at 8% 108%, rgba(255,179,167,.12), transparent 55%),
+     var(--bg)}
+  .hero h1{font-size:clamp(2.6rem,6.4vw,5rem);font-weight:800;max-width:15ch}
+  .hero p.lead{font-size:clamp(1.05rem,1.7vw,1.35rem);color:#cfcfd8;max-width:52ch;margin:26px 0 36px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-meta{margin-top:54px;display:flex;gap:40px;flex-wrap:wrap;color:var(--muted-d);font-size:.9rem}
+  .hero-meta strong{display:block;font-family:'Sora',sans-serif;color:var(--cream);font-size:1.5rem;font-weight:700}
+
+  /* CLIENTS / LOGO WALL */
+  .clients{background:#ffffff;color:var(--ink)}
+  .clients .eyebrow{color:var(--accent)}
+  .clients .sec-head h2{color:var(--ink)}
+  .clients .sec-head p{color:var(--muted-l)}
+  .logo-wall{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+  .logo-cell{flex:1 1 200px;max-width:255px;background:#fff;border:1px solid #ececec;border-radius:16px;min-height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:22px;transition:transform .2s,box-shadow .2s,border-color .2s}
+  .logo-cell:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(20,20,25,.09);border-color:#e2e2e2}
+  .logo-cell{flex:1 1 250px;max-width:290px;min-height:138px}
+  .logo-cell img{max-height:60px;max-width:100%;width:auto;object-fit:contain}
+  .logo-cell.dark{background:#141418;border-color:#141418}
+  .logo-cell.round img{height:86px;width:86px;border-radius:50%;object-fit:cover;max-height:none;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+  .logo-cell .cap{font-family:'Sora',sans-serif;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted-l)}
+
+  /* SERVICES */
+  .services{background:var(--cream);color:var(--ink)}
+  .services .sec-head h2{color:var(--ink)}
+  .services .sec-head p{color:var(--muted-l)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .svc-card{background:var(--card);border:1px solid #ece7df;border-radius:18px;padding:32px 28px;transition:transform .2s,box-shadow .2s}
+  .svc-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,20,25,.09)}
+  .svc-icon{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-soft));display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .svc-icon svg{width:24px;height:24px;stroke:#fff}
+  .svc-card h3{font-size:1.28rem;color:var(--ink);margin-bottom:8px}
+  .svc-card p{color:var(--muted-l);font-size:.96rem;margin-bottom:18px}
+  .price-tag{font-family:'Sora',sans-serif;font-weight:700;color:var(--ink);font-size:1.05rem}
+  .price-tag small{display:block;font-family:'Inter';font-weight:500;color:var(--muted-l);font-size:.8rem;letter-spacing:.02em}
+
+  /* WORK / PORTFOLIO */
+  .work{background:var(--bg)}
+  .work .sec-head h2{color:var(--cream)}
+  .work .sec-head p{color:var(--muted-d)}
+  .reel-wrap{max-width:980px;margin:0 auto 46px}
+  .reel{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+  .reel iframe,.reel video{width:100%;height:100%;border:0;display:block;object-fit:cover}
+  .reel-ph{text-align:center;color:var(--muted-d);padding:30px;max-width:44ch}
+  .reel-ph .play{width:66px;height:66px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 8px 26px rgba(255,91,110,.4)}
+  .reel-ph .play svg{width:24px;height:24px;fill:#fff;margin-left:3px}
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .work-card{position:relative;aspect-ratio:16/10;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#1c1c22,#2a1a20);cursor:pointer;display:block}
+  .work-card img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+  .work-card:hover img{transform:scale(1.06)}
+  .work-card .ph-icon{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.5}
+  .work-card .ph-icon svg{width:40px;height:40px;fill:none;stroke:var(--accent-soft);stroke-width:1.5}
+  .work-card .meta{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(transparent,rgba(0,0,0,.82))}
+  .work-card .meta h4{color:#fff;font-size:1.05rem}
+  .work-card .meta span{color:var(--accent-soft);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-family:'Sora',sans-serif}
+
+  /* WEDDING */
+  .wedding{background:var(--cream);color:var(--ink)}
+  .wed-card{background:linear-gradient(135deg,#17171b,#26141a);border-radius:22px;padding:52px 48px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;color:var(--cream);position:relative;overflow:hidden}
+  .wed-card::after{content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(255,91,110,.35),transparent 70%)}
+  .wed-card h3{font-size:1.9rem;position:relative}
+  .wed-card p{color:#d3d3db;margin-top:10px;max-width:46ch;position:relative}
+  .wed-price{font-family:'Sora',sans-serif;font-weight:800;font-size:2.2rem;position:relative;white-space:nowrap}
+  .wed-price small{display:block;font-family:'Inter';font-weight:500;font-size:.82rem;color:var(--accent-soft)}
+
+  /* BOOKING */
+  .booking{background:var(--cream);color:var(--ink)}
+  .booking .sec-head h2{color:var(--ink)}
+  .booking .sec-head p{color:var(--muted-l)}
+  .cal-shell{background:var(--card);border:1px solid #ece7df;border-radius:20px;padding:14px;overflow:hidden;min-height:560px}
+  #cal-inline{width:100%;height:600px;overflow:auto}
+  .cal-fallback{padding:48px 28px;text-align:center}
+
+  /* CONTACT */
+  .contact{background:var(--bg-soft)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .contact-info h2{font-size:clamp(1.9rem,3.4vw,2.8rem)}
+  .contact-info p{color:#cfcfd8;margin-top:16px;max-width:44ch}
+  .contact-list{margin-top:30px;display:flex;flex-direction:column;gap:16px}
+  .contact-list a{display:flex;align-items:center;gap:12px;color:#dcdce3;font-weight:500}
+  .contact-list svg{width:20px;height:20px;stroke:var(--accent)}
+  form{display:flex;flex-direction:column;gap:16px;background:var(--panel);border:1px solid var(--line);padding:32px;border-radius:20px}
+  label{font-size:.82rem;font-weight:600;color:#bcbcc6;font-family:'Sora',sans-serif;margin-bottom:-8px}
+  input,select,textarea{width:100%;padding:13px 15px;border-radius:11px;border:1px solid #2f2f38;background:#101015;color:var(--cream);font-family:inherit;font-size:.96rem}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+  textarea{resize:vertical;min-height:120px}
+  form .btn-primary{margin-top:8px}
+  #form-status{font-size:.9rem;text-align:center;min-height:20px}
+
+  /* FOOTER */
+  footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 40px}
+  .foot-inner{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:center}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted-d);font-size:.92rem}
+  .foot-links a:hover{color:var(--accent)}
+  .foot-bottom{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted-d);font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  @media(max-width:860px){
+    .svc-grid{grid-template-columns:1fr}
+    .work-grid{grid-template-columns:1fr 1fr}
+    .contact-grid{grid-template-columns:1fr;gap:34px}
+    .nav-links{position:fixed;inset:70px 0 auto 0;flex-direction:column;background:var(--bg-soft);padding:24px;gap:20px;border-bottom:1px solid var(--line);transform:translateY(-160%);transition:transform .3s;height:auto}
+    .nav-links.open{transform:translateY(0)}
+    .hamburger{display:flex}
+    .wed-card{padding:36px 28px}
+    section{padding:72px 0}
+    .logo-cell{flex:1 1 140px;min-height:112px}
+  }
+  @media(max-width:480px){
+    .work-grid{grid-template-columns:1fr}
+    .hero-meta{gap:26px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo">Flemingo<span>.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#work">Work</a>
+      <a href="#clients">Clients</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#book">Book</a>
+      <a href="#contact" class="btn btn-primary" style="color:#fff">Get in touch</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding-top:92px">
+  <div class="wrap">
+    <div class="eyebrow">Cinematographer · Editor · Creative Director</div>
+    <h1 data-key="heroTitle">Films with feeling, crafted frame by frame.</h1>
+    <p class="lead" data-key="heroSub">Flemingo Productions is the studio of Colton Fleming — cinematography, editing, and creative direction for brands, weddings, and stories worth telling.</p>
+    <div class="hero-cta">
+      <a href="#book" class="btn btn-primary">Book a call</a>
+      <a href="#work" class="btn btn-dark">Showreel</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>7+</strong>brands &amp; creators trust Flemingo</div>
+      <div><strong>4K</strong>cinema-grade delivery</div>
+      <div><strong>CA</strong>based, available to travel</div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK / PORTFOLIO -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Portfolio</div>
+      <h2>The reel, and a few favorites.</h2>
+      <p>A look at recent brand films, weddings, and creator work. Full reel up top; selected pieces below.</p>
+    </div>
+    <div class="reel-wrap">
+      <div class="reel" id="reel">
+        <div class="reel-ph">
+          <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <h3 style="color:var(--cream);margin-bottom:8px">Your showreel goes here</h3>
+          <p>Add your Vimeo or YouTube reel link (see the setup guide) and it plays right here in full 16:9. Until then, this placeholder holds the spot.</p>
+        </div>
+      </div>
+    </div>
+    <div class="work-grid" id="workGrid">
+      <a class="work-card"><span class="ph-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="meta"><span>Commercial</span><h4>Brand Film</h4></div></a>
+      <a class="work-card"><span class="ph-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="meta"><span>Wedding</span><h4>Wedding Highlight</h4></div></a>
+      <a class="work-card"><span class="ph-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="meta"><span>Commercial</span><h4>Product Spot</h4></div></a>
+      <a class="work-card"><span class="ph-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="meta"><span>Social</span><h4>Creator Collab</h4></div></a>
+      <a class="work-card"><span class="ph-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="meta"><span>Event</span><h4>Event Recap</h4></div></a>
+      <a class="work-card"><span class="ph-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><div class="meta"><span>Music</span><h4>Music Video</h4></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS / LOGO WALL -->
+<section class="clients" id="clients">
+  <div class="wrap">
+    <div class="sec-head" style="margin-left:auto;margin-right:auto;text-align:center">
+      <div class="eyebrow">Trusted by</div>
+      <h2>Brands &amp; creators I've made work for.</h2>
+      <p>From global camera brands to nonprofits and creators — a few of the names behind the work.</p>
+    </div>
+    <div class="logo-wall" id="logoWall">
+      <div class="logo-cell featured"><img src="images/icast.png" alt="ICAST 2026" /></div>
+      <div class="logo-cell featured"><img src="images/insta360.png" alt="Insta360" /></div>
+      <div class="logo-cell featured round"><img src="images/joe-oceanside.png" alt="Joe Oceanside" /><span class="cap">Joe Oceanside</span></div>
+      <div class="logo-cell"><img src="images/viltrox.png" alt="Viltrox" /></div>
+      <div class="logo-cell"><img src="images/this-village-now.png" alt="This Village Now" /></div>
+      <div class="logo-cell"><img src="images/garces-bros.png" alt="Garces Bros Studio" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What I do</div>
+      <h2>Full-service production, from concept to final cut.</h2>
+      <p>Book any discipline on its own, or the whole pipeline. Day rates below; multi-day and package pricing on request.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg></div>
+        <h3>Cinematography</h3>
+        <p>Cinema-grade camera work for commercials, brand films, music videos, and events.</p>
+        <div class="price-tag">Starting at $500<small>per day</small></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg></div>
+        <h3>Editing &amp; Post</h3>
+        <p>Story-first editing, color, and sound that turn footage into something people finish watching.</p>
+        <div class="price-tag">Starting at $450<small>per day</small></div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>Creative Direction / DP</h3>
+        <p>Concept, look, and lead-your-shoot direction — I set the vision and run the day.</p>
+        <div class="price-tag">Starting at $575<small>per day</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEDDING -->
+<section class="wedding" id="pricing">
+  <div class="wrap">
+    <div class="wed-card">
+      <div>
+        <div class="eyebrow" style="color:var(--accent-soft)">Weddings</div>
+        <h3>Cinematic wedding films</h3>
+        <p>A film that actually feels like your day — coverage, story edit, and a highlight piece you'll rewatch for years.</p>
+      </div>
+      <div class="wed-price" data-key="weddingPrice">Starting at $1,500<small>packages · custom quotes welcome</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="book">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Let's talk</div>
+      <h2>Book a free discovery call.</h2>
+      <p>Pick a time that works — it drops straight onto my calendar and you'll get a confirmation.</p>
+    </div>
+    <div class="cal-shell">
+      <div id="cal-inline">
+        <div class="cal-fallback">
+          <h3 style="color:var(--ink)">Scheduling loads here once connected</h3>
+          <p style="color:var(--muted-l);max-width:44ch;margin:12px auto 0">Your Cal.com booking widget appears in this box after you add your Cal link (see the setup guide). Until then, use the button below.</p>
+          <a href="#contact" class="btn btn-primary" style="color:#fff;margin-top:18px">Send an inquiry instead</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <div class="eyebrow">Contact</div>
+      <h2>Tell me about your project.</h2>
+      <p>Weddings, brand films, or a one-off shoot — send a few details and I'll get back within a day.</p>
+      <div class="contact-list">
+        <a href="mailto:coltonflemingfilms@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>coltonflemingfilms@gmail.com</a>
+        <a href="#book"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book a call</a>
+      </div>
+    </div>
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+      <input type="hidden" name="subject" value="New inquiry from Flemingo Productions site" />
+      <input type="checkbox" name="botcheck" style="display:none" />
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" placeholder="Your name" required />
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="you@email.com" required />
+      <label for="ptype">Project type</label>
+      <select id="ptype" name="project_type">
+        <option>Wedding film</option>
+        <option>Brand / commercial</option>
+        <option>Music video</option>
+        <option>Editing only</option>
+        <option>Creative direction / DP</option>
+        <option>Other</option>
+      </select>
+      <label for="message">Details</label>
+      <textarea id="message" name="message" placeholder="Dates, location, vision, budget range…" required></textarea>
+      <button type="submit" class="btn btn-primary">Send inquiry</button>
+      <div id="form-status"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <a href="#top" class="logo">Flemingo<span>.</span> <span style="font-family:Inter;font-weight:500;font-size:.8rem;color:var(--muted-d);letter-spacing:0">Productions</span></a>
+      <div class="foot-links">
+        <a href="#work">Work</a>
+        <a href="#clients">Clients</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#book">Book</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Flemingo Productions. All rights reserved.</span>
+      <span>Cinematography · Editing · Creative Direction</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const ham = document.getElementById('hamburger');
+  const links = document.getElementById('navLinks');
+  ham.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  // Contact form (AJAX)
+  const form = document.getElementById('contactForm');
+  const fstatus = document.getElementById('form-status');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const key = form.querySelector('[name=access_key]').value;
+    if (key === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+      fstatus.style.color = 'var(--accent-soft)';
+      fstatus.textContent = 'Form not connected yet — add your Web3Forms key (see setup guide).';
+      return;
+    }
+    fstatus.style.color = 'var(--muted-d)'; fstatus.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+      const data = await res.json();
+      if (data.success) { fstatus.style.color = '#7fdca0'; fstatus.textContent = 'Thanks — your inquiry is on its way!'; form.reset(); }
+      else throw new Error();
+    } catch { fstatus.style.color = 'var(--accent)'; fstatus.textContent = 'Something went wrong. Email me directly instead.'; }
+  });
+
+  function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+  // Reel embed helper
+  function setReel(cfg){
+    const reel = document.getElementById('reel');
+    if (cfg.reelEmbed) {
+      let src = cfg.reelEmbed;
+      const yt = src.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([\w-]+)/);
+      const vm = src.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+      if (yt) src = 'https://www.youtube.com/embed/' + yt[1];
+      else if (vm) src = 'https://player.vimeo.com/video/' + vm[1];
+      reel.innerHTML = '<iframe src="'+esc(src)+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+    } else if (cfg.reelFile) {
+      reel.innerHTML = '<video src="'+esc(cfg.reelFile)+'" controls playsinline preload="metadata"></video>';
+    }
+  }
+
+  // Portfolio + clients rebuild
+  function render(cfg){
+    document.querySelectorAll('[data-key]').forEach(el => { const k=el.getAttribute('data-key'); if(cfg[k]) el.innerHTML = cfg[k]; });
+
+    if (Array.isArray(cfg.clients) && cfg.clients.length){
+      const wall = document.getElementById('logoWall'); wall.innerHTML='';
+      cfg.clients.forEach(c => {
+        const cell = document.createElement('div');
+        cell.className = 'logo-cell' + (c.featured?' featured':'') + (c.dark?' dark':'') + (c.round?' round':'');
+        cell.innerHTML = c.logo
+          ? `<img src="${esc(c.logo)}" alt="${esc(c.name)}">` + (c.round?`<span class="cap">${esc(c.name)}</span>`:'')
+          : `<span class="cap" style="font-size:1rem;letter-spacing:0;color:var(--ink);font-weight:700">${esc(c.name)}</span>`;
+        wall.appendChild(cell);
+      });
+    }
+
+    if (Array.isArray(cfg.portfolio) && cfg.portfolio.length){
+      const grid = document.getElementById('workGrid'); grid.innerHTML='';
+      cfg.portfolio.forEach(it => {
+        const a = document.createElement('a');
+        a.className='work-card';
+        if (it.link) { a.href = it.link; a.target='_blank'; a.rel='noopener'; }
+        a.innerHTML = (it.thumb
+            ? `<img src="${esc(it.thumb)}" alt="${esc(it.title)}">`
+            : `<span class="ph-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>`)
+          + `<div class="meta"><span>${esc(it.category)}</span><h4>${esc(it.title)}</h4></div>`;
+        grid.appendChild(a);
+      });
+    }
+
+    setReel(cfg);
+    if (cfg.web3formsKey) form.querySelector('[name=access_key]').value = cfg.web3formsKey;
+    if (cfg.calLink) initCal(cfg.calLink);
+  }
+
+  // Hydrate from data/site.json when hosted; silently keep built-in content locally.
+  fetch('data/site.json').then(r => r.ok ? r.json() : Promise.reject()).then(render).catch(()=>{});
+
+  // Cal.com inline embed
+  function initCal(calLink){
+    document.getElementById('cal-inline').innerHTML = '';
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", {origin:"https://cal.com"});
+    Cal("inline", { elementOrSelector:"#cal-inline", calLink: calLink, layout:"month_view" });
+    Cal("ui", { hideEventTypeDetails:false, layout:"month_view" });
+  }
+</script>
+</body>
+</html>

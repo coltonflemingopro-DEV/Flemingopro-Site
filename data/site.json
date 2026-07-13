@@ -1,0 +1,25 @@
+{
+  "heroTitle": "Films with feeling, crafted frame by frame.",
+  "heroSub": "Flemingo Productions is the studio of Colton Fleming — cinematography, editing, and creative direction for brands, weddings, and stories worth telling.",
+  "weddingPrice": "Starting at $1,500<small>packages · custom quotes welcome</small>",
+  "web3formsKey": "",
+  "calLink": "",
+  "reelEmbed": "",
+  "reelFile": "",
+  "clients": [
+    { "name": "ICAST 2026", "kind": "Sportfishing Expo", "logo": "images/icast.png", "featured": true, "dark": false, "round": false },
+    { "name": "Insta360", "kind": "Action Cameras", "logo": "images/insta360.png", "featured": true, "dark": false, "round": false },
+    { "name": "Joe Oceanside", "kind": "YouTube Creator", "logo": "images/joe-oceanside.png", "featured": true, "dark": false, "round": true },
+    { "name": "Viltrox", "kind": "Optics & Lenses", "logo": "images/viltrox.png", "featured": false, "dark": false, "round": false },
+    { "name": "This Village Now", "kind": "Nonprofit", "logo": "images/this-village-now.png", "featured": false, "dark": false, "round": false },
+    { "name": "Garces Bros Studio", "kind": "Studio", "logo": "images/garces-bros.png", "featured": false, "dark": false, "round": false }
+  ],
+  "portfolio": [
+    { "title": "Brand Film", "category": "Commercial", "thumb": "", "link": "" },
+    { "title": "Wedding Highlight", "category": "Wedding", "thumb": "", "link": "" },
+    { "title": "Product Spot", "category": "Commercial", "thumb": "", "link": "" },
+    { "title": "Creator Collab", "category": "Social", "thumb": "", "link": "" },
+    { "title": "Event Recap", "category": "Event", "thumb": "", "link": "" },
+    { "title": "Music Video", "category": "Music", "thumb": "", "link": "" }
+  ]
+}

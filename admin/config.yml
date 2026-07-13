@@ -1,0 +1,56 @@
+# Flemingo Productions — visual admin panel config (Decap CMS)
+# LOGIN: we use DecapBridge (free) so you can log in with Google/email — no GitHub
+# account needed to edit. In the hosting guide, DecapBridge generates the exact
+# 'backend' block below; paste what it gives you over these placeholder lines.
+
+backend:
+  name: git-gateway
+  gateway_url: https://gateway.decapbridge.com
+  repo: YOUR_GITHUB_USERNAME/flemingo-site   # DecapBridge fills this in for you
+  branch: main
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}"'
+    update: 'Update {{collection}} "{{slug}}"'
+    delete: 'Delete {{collection}} "{{slug}}"'
+    uploadMedia: 'Upload "{{path}}"'
+    deleteMedia: 'Delete "{{path}}"'
+
+# site_id is provided by DecapBridge when you create your site — paste it here:
+site_id: YOUR_DECAPBRIDGE_SITE_ID
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "site"
+    label: "Website content"
+    files:
+      - name: "content"
+        label: "Homepage & pricing"
+        file: "data/site.json"
+        fields:
+          - { name: "heroTitle", label: "Hero headline", widget: "string" }
+          - { name: "heroSub", label: "Hero subtext", widget: "text" }
+          - { name: "weddingPrice", label: "Wedding price line (HTML ok)", widget: "string" }
+          - { name: "reelEmbed", label: "Showreel link (Vimeo or YouTube URL)", widget: "string", required: false }
+          - { name: "reelFile", label: "Or self-hosted reel file (small MP4 only)", widget: "file", required: false }
+          - { name: "calLink", label: "Cal.com link (e.g. flemingo/discovery-call)", widget: "string", required: false }
+          - { name: "web3formsKey", label: "Web3Forms access key", widget: "string", required: false }
+          - name: "clients"
+            label: "Clients / logos"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Client name", widget: "string" }
+              - { name: "kind", label: "Category", widget: "string", required: false }
+              - { name: "logo", label: "Logo image", widget: "image", required: false }
+              - { name: "featured", label: "Featured (larger) logo", widget: "boolean", default: false }
+              - { name: "dark", label: "Dark tile (for white logos)", widget: "boolean", default: false }
+              - { name: "round", label: "Round avatar (for a photo)", widget: "boolean", default: false }
+          - name: "portfolio"
+            label: "Portfolio pieces"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "category", label: "Category", widget: "string", required: false }
+              - { name: "thumb", label: "Thumbnail image", widget: "image", required: false }
+              - { name: "link", label: "Link (Vimeo/YouTube, optional)", widget: "string", required: false }
