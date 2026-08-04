@@ -21,5 +21,10 @@
     { "title": "Event Recap", "category": "Event", "thumb": "https://img.youtube.com/vi/-yqxEgHOp-0/hqdefault.jpg", "link": "https://youtu.be/-yqxEgHOp-0" },
     { "title": "Cause Film", "category": "Nonprofit", "thumb": "https://img.youtube.com/vi/QeVm_yA1AnQ/hqdefault.jpg", "link": "https://youtu.be/QeVm_yA1AnQ" },
     { "title": "Challenges", "category": "Series", "thumb": "https://img.youtube.com/vi/zHlLx5wCksw/hqdefault.jpg", "link": "https://youtu.be/zHlLx5wCksw" }
+  ],
+  "reviews": [
+    { "name": "Dominic", "rating": 5, "quote": "Colton was great to work with, easy to communicate with, and definitely knowledgeable in all things filmmaking! Eager to possibly work with him again in the future. Highly recommend his video work to anyone in need." },
+    { "name": "Jonathan Osorio", "rating": 5, "quote": "We enjoyed what Colton Fleming Productions did for our photography and film — the results were nothing short of amazing. Their attention to detail and storytelling ability truly set them apart." },
+    { "name": "Garces Bros Studio", "rating": 5, "quote": "Colton is a solid creative to have on set! He brings a great attitude, is professional, respectful, and always ready to help. He knows his way around the camera." }
   ]
 }
