@@ -119,6 +119,21 @@
   .wed-price{font-family:'Sora',sans-serif;font-weight:800;font-size:2.2rem;position:relative;white-space:nowrap}
   .wed-price small{display:block;font-family:'Inter';font-weight:500;font-size:.82rem;color:var(--accent-soft)}
 
+  /* REVIEWS */
+  .reviews{background:var(--bg)}
+  .reviews .sec-head{margin-left:auto;margin-right:auto;text-align:center}
+  .reviews .sec-head h2{color:var(--cream)}
+  .rev-badge{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--cream);font-family:'Sora',sans-serif;font-weight:600;font-size:.95rem;text-decoration:none}
+  .rev-badge .g-stars{color:#F6B01E;letter-spacing:2px}
+  .rev-badge:hover{color:var(--accent)}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:42px}
+  .review-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:28px 26px;display:flex;flex-direction:column;gap:14px}
+  .review-card .stars{color:#F6B01E;letter-spacing:2px;font-size:1.05rem}
+  .review-card p{color:#dcdce3;font-size:.98rem;line-height:1.6;flex:1;margin:0}
+  .review-card .rev-name{font-family:'Sora',sans-serif;font-weight:700;color:var(--cream);font-size:1rem}
+  .review-card .rev-name span{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.78rem;color:var(--muted-d);letter-spacing:.02em;margin-top:2px}
+  @media(max-width:860px){.review-grid{grid-template-columns:1fr}}
+
   /* BOOKING */
   .booking{background:var(--cream);color:var(--ink)}
   .booking .sec-head h2{color:var(--ink)}
@@ -178,6 +193,7 @@
       <a href="#clients">Clients</a>
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
       <a href="#book">Book</a>
       <a href="#contact" class="btn btn-primary" style="color:#fff">Get in touch</a>
     </nav>
@@ -287,6 +303,22 @@
         <p>A film that actually feels like your day — coverage, story edit, and a highlight piece you'll rewatch for years.</p>
       </div>
       <div class="wed-price" data-key="weddingPrice">Starting at $1,500<small>packages · custom quotes welcome</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Reviews</div>
+      <h2>What clients say.</h2>
+      <a class="rev-badge" href="https://share.google/OX5VJrhVMlIW41jFC" target="_blank" rel="noopener"><span class="g-stars">★★★★★</span> 5.0 on Google · 6 reviews</a>
+    </div>
+    <div class="review-grid" id="reviewGrid">
+      <div class="review-card"><div class="stars">★★★★★</div><p>"Colton was great to work with, easy to communicate with, and definitely knowledgeable in all things filmmaking! Eager to possibly work with him again in the future. Highly recommend his video work to anyone in need."</p><div class="rev-name">Dominic<span>Google review</span></div></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p>"We enjoyed what Colton Fleming Productions did for our photography and film — the results were nothing short of amazing. Their attention to detail and storytelling ability truly set them apart."</p><div class="rev-name">Jonathan Osorio<span>Google review</span></div></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p>"Colton is a solid creative to have on set! He brings a great attitude, is professional, respectful, and always ready to help. He knows his way around the camera."</p><div class="rev-name">Garces Bros Studio<span>Google review</span></div></div>
     </div>
   </div>
 </section>
@@ -442,6 +474,19 @@
           + `<div class="meta"><span>${esc(it.category)}</span><h4>${esc(it.title)}</h4></div>`;
         grid.appendChild(a);
       });
+    }
+
+    if (Array.isArray(cfg.reviews) && cfg.reviews.length){
+      const rg = document.getElementById('reviewGrid');
+      if (rg){ rg.innerHTML='';
+        cfg.reviews.forEach(r => {
+          const d = document.createElement('div'); d.className='review-card';
+          d.innerHTML = '<div class="stars">'+'★'.repeat(r.rating||5)+'</div>'
+            + '<p>"'+esc(r.quote)+'"</p>'
+            + '<div class="rev-name">'+esc(r.name)+'<span>Google review</span></div>';
+          rg.appendChild(d);
+        });
+      }
     }
 
     setReel(cfg);
