@@ -1,10 +1,10 @@
 {
-  "heroTitle": "Films with feeling, crafted frame by frame.",
-  "heroSub": "Flemingo Productions is the studio of Colton Fleming — cinematography, editing, and creative direction for brands, weddings, and stories worth telling.",
+  "heroTitle": "Cinematic video for weddings, brands, and the stories in between.",
+  "heroSub": "Colton Fleming Productions — wedding films, brand advertisements, and corporate interviews, delivered with a cinematic touch. Based in California & Florida.",
   "weddingPrice": "Starting at $1,500<small>packages · custom quotes welcome</small>",
   "web3formsKey": "",
   "calLink": "",
-  "reelEmbed": "",
+  "reelEmbed": "https://youtu.be/m5P5TGUY0HQ",
   "reelFile": "",
   "clients": [
     { "name": "ICAST 2026", "kind": "Sportfishing Expo", "logo": "images/icast.png", "featured": true, "dark": false, "round": false },
@@ -15,11 +15,10 @@
     { "name": "Garces Bros Studio", "kind": "Studio", "logo": "images/garces-bros.png", "featured": false, "dark": false, "round": false }
   ],
   "portfolio": [
-    { "title": "Brand Film", "category": "Commercial", "thumb": "", "link": "" },
-    { "title": "Wedding Highlight", "category": "Wedding", "thumb": "", "link": "" },
-    { "title": "Product Spot", "category": "Commercial", "thumb": "", "link": "" },
-    { "title": "Creator Collab", "category": "Social", "thumb": "", "link": "" },
-    { "title": "Event Recap", "category": "Event", "thumb": "", "link": "" },
-    { "title": "Music Video", "category": "Music", "thumb": "", "link": "" }
+    { "title": "Wedding Highlight", "category": "Wedding", "thumb": "https://img.youtube.com/vi/m5P5TGUY0HQ/hqdefault.jpg", "link": "https://youtu.be/m5P5TGUY0HQ" },
+    { "title": "Creator Collab", "category": "Social", "thumb": "https://img.youtube.com/vi/KGrxHdONwQQ/hqdefault.jpg", "link": "https://youtu.be/KGrxHdONwQQ" },
+    { "title": "Music Video", "category": "Music", "thumb": "https://img.youtube.com/vi/VYA-slJyj4Y/hqdefault.jpg", "link": "https://youtu.be/VYA-slJyj4Y" },
+    { "title": "Event Recap", "category": "Event", "thumb": "https://img.youtube.com/vi/-yqxEgHOp-0/hqdefault.jpg", "link": "https://youtu.be/-yqxEgHOp-0" },
+    { "title": "Cause Film", "category": "Nonprofit", "thumb": "https://img.youtube.com/vi/QeVm_yA1AnQ/hqdefault.jpg", "link": "https://youtu.be/QeVm_yA1AnQ" }
   ]
 }
